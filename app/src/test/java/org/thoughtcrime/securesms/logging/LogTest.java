@@ -26,6 +26,11 @@ public final class LogTest {
     assertEquals(23, Log.tag(TwentyThreeCharacters23.class).length());
   }
 
+  @Test public void alwaysFailingTest(){
+    assertEquals(true, false);
+    assertEquals(false, true);
+  }
+
   private class MyClass {
   }
 

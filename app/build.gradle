@@ -451,6 +451,12 @@ tasks.whenTaskAdded { task ->
     }
 }
 
+project.gradle.taskGraph.whenReady {
+    connectedAndroidTest {
+        ignoreFailures = true
+    }
+}
+
 def getLastCommitTimestamp() {
     new ByteArrayOutputStream().withStream { os ->
         def result = exec {

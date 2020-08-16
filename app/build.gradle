@@ -21,6 +21,8 @@ buildscript {
     }
 }
 
+
+
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'androidx.navigation.safeargs'
@@ -435,6 +437,11 @@ task signProductionWebsiteRelease {
 }
 
 tasks.whenTaskAdded { task ->
+    if (task.name.contains("mergePlayFlipperResources ")||
+        task.name.contains("mergePlayDebugResources ")){
+        task.enabled = false
+    }
+
     if (task.name.equals("assemblePlayRelease")) {
         task.finalizedBy signProductionPlayRelease
     }

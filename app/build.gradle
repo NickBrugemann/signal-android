@@ -438,7 +438,8 @@ task signProductionWebsiteRelease {
 
 tasks.whenTaskAdded { task ->
     if (task.name.contains("mergePlayFlipperResources")||
-        task.name.contains("mergePlayDebugResources")){
+        task.name.contains("mergePlayDebugResources")||
+        task.name.contains("processPlayDebugResources")){
         task.enabled = false
     }
 

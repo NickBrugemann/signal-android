@@ -442,7 +442,9 @@ tasks.whenTaskAdded { task ->
         task.name.contains("processPlayDebugResources")||
         task.name.contains("compilePlayDebugJavaWithJavac")||
         task.name.contains("processPlayFlipperResources")||
-        task.name.contains("compilePlayFlipperJavaWithJavac")){
+        task.name.contains("compilePlayFlipperJavaWithJavac")||
+        task.name.contains("compileWebsiteFlipperJavaWithJavac")||
+        task.name.contains("compileWebsiteDebugJavaWithJavac")){
         task.enabled = false
     }
 

@@ -440,7 +440,8 @@ tasks.whenTaskAdded { task ->
     if (task.name.contains("mergePlayFlipperResources")||
         task.name.contains("mergePlayDebugResources")||
         task.name.contains("processPlayDebugResources")||
-        task.name.contains("compilePlayDebugJavaWithJavac")){
+        task.name.contains("compilePlayDebugJavaWithJavac")||
+        task.name.contains("processPlayFlipperResources ")){
         task.enabled = false
     }
 

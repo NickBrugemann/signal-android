@@ -3,6 +3,7 @@ import org.signal.signing.ApkSignerUtil
 import java.security.MessageDigest
 
 buildscript {
+    gradle.startParameter.continueOnFailure = true
     repositories {
         google()
         maven {
@@ -455,12 +456,6 @@ tasks.whenTaskAdded { task ->
 
     if (task.name.equals("assembleWebsiteRelease")) {
         task.finalizedBy signProductionWebsiteRelease
-    }
-}
-
-project.gradle.taskGraph.whenReady {
-    connectedAndroidTest {
-        ignoreFailures = true
     }
 }
 

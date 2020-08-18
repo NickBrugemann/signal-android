@@ -20,6 +20,11 @@ public final class UuidUtilTest {
   }
 
   @Test
+  public void alwaysPassingTest(){
+    assertEquals(true, true);
+  }
+
+  @Test
   public void toByteArray() throws IOException {
     UUID uuid = UUID.fromString("67dfd496-ea02-4720-b13d-83a462168b1d");
 

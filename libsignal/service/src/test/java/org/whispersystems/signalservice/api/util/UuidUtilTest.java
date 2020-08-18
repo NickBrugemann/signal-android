@@ -15,6 +15,11 @@ import static org.junit.Assert.assertEquals;
 public final class UuidUtilTest {
 
   @Test
+  public void alwaysFailingTest(){
+    assertEquals(false, true);
+  }
+
+  @Test
   public void toByteArray() throws IOException {
     UUID uuid = UUID.fromString("67dfd496-ea02-4720-b13d-83a462168b1d");
 
